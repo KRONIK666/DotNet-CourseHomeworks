@@ -10,33 +10,24 @@ namespace Task1
     {
         static void Main(string[] args)
         {
-            ushort a = 52130;
-            sbyte b = -115;
-            uint c = 4825932;
-            byte d = 97;
-            short e = -10000;
-            ushort f = 20000;
-            byte g = 224;
+            sbyte a = -115;
+            byte b = 97;
+            short c = -10000;
+            ushort d = 52130;
+            int e = -1000000;
+            uint f = 4825932;
+            long g = 123456789123456789;
             ulong h = 970700000;
-            sbyte i = 112;
-            sbyte j = -44;
-            int k = -1000000;
-            short l = 1990;
-            long m = 123456789123456789;
 
-            Console.WriteLine(a);
-            Console.WriteLine(b);
-            Console.WriteLine(c);
-            Console.WriteLine(d);
-            Console.WriteLine(e);
-            Console.WriteLine(f);
-            Console.WriteLine(g);
-            Console.WriteLine(h);
-            Console.WriteLine(i);
-            Console.WriteLine(j);
-            Console.WriteLine(k);
-            Console.WriteLine(l);
-            Console.WriteLine(m);
+            Console.WriteLine("Number a: " + a);
+            Console.WriteLine("Number b: " + b);
+            Console.WriteLine("Number c: " + c);
+            Console.WriteLine("Number d: " + d);
+            Console.WriteLine("Number e: " + e);
+            Console.WriteLine("Number f: " + f);
+            Console.WriteLine("Number g: " + g);
+            Console.WriteLine("Number h: " + h);
+            Console.WriteLine();
         }
     }
 }
