@@ -12,56 +12,57 @@ namespace Methods
         {
             Console.Write("Enter array's length: ");
             int n = int.Parse(Console.ReadLine());
-            int[] myArray = new int[n];
+            int[] numArray = new int[n];
             Console.WriteLine();
 
-            for (int i = 0; i < myArray.Length; i++)
+            Console.Write("Enter array's length: ");
+            int s = int.Parse(Console.ReadLine());
+            string[] stringArray = new string[s];
+            Console.WriteLine();
+
+            for (int i = 0; i < numArray.Length; i++)
             {
                 Console.Write("Enter element: ");
-                myArray[i] = int.Parse(Console.ReadLine());
+                numArray[i] = int.Parse(Console.ReadLine());
             }
 
             Console.WriteLine();
-            Console.WriteLine("Your array backwards is:");
+            Console.WriteLine("Your num array backwards is:");
             Console.WriteLine();
 
-            PrintArray(myArray);
+            PrintArray(numArray);
 
             Console.WriteLine();
-        }
 
-        private static void PrintArray(int[] myArray)
-        {
-            for (int i = myArray.Length - 1; i >= 0; i--)
-            {
-                Console.WriteLine(myArray[i]);
-            }
-        }
-
-        Console.Write("Enter length: ");
-            int n = int.Parse(Console.ReadLine());
-            string[] massive = new string[n];
-
-            for (int i = 0; i < massive.Length; i++)
+            for (int i = 0; i < stringArray.Length; i++)
             {
                 Console.Write("Enter element: ");
-                massive[i] = Console.ReadLine();
+                stringArray[i] = Console.ReadLine();
             }
 
             Console.WriteLine();
-            Console.WriteLine("Your array is:");
+            Console.WriteLine("Your string array backwards is:");
             Console.WriteLine();
 
-            BuildArray(massive);
+            PrintArray(stringArray);
 
             Console.WriteLine();
         }
 
-        private static void BuildArray(string[] massive)
+        private static void PrintArray(int[] numArray)
         {
-            for (int i = massive.Length - 1; i >= 0; i--)
+            for (int i = numArray.Length - 1; i >= 0; i--)
             {
-                Console.WriteLine(massive[i]);
+                Console.WriteLine(numArray[i]);
             }
+        }
+
+        private static void PrintArray(string[] stringArray)
+        {
+            for (int i = stringArray.Length - 1; i >= 0; i--)
+            {
+                Console.WriteLine(stringArray[i]);
+            }
+        }
     }
 }
