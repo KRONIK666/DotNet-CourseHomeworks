@@ -15,7 +15,8 @@ namespace Arrays6
             int[] myArray = new int[n];
 
             int count = 0;
-            int currentIndex = 0;
+            int maxcount = 1;
+            int maxvalue = 0;
             Console.WriteLine();
 
             if (n > 0 && n <= 100)
@@ -28,17 +29,27 @@ namespace Arrays6
 
                 for (int i = 0; i < myArray.Length; i++)
                 {
-                    if (myArray[i] == myArray[currentIndex])
+                    count++;
+                    maxvalue = myArray[i];
+
+                    for (int j = 0; j < myArray.Length; j++)
                     {
-                        count++;
-                    }
-                    if (n == 1)
-                    {
-                        currentIndex = i;
-                        count = 1;
+                        if (maxvalue == myArray[j] && j != i)
+                        {
+                            if (count > maxcount)
+                            {
+                                maxcount = count;
+                                maxvalue = myArray[i];
+                            }
+                        }
+                        if (n == 1)
+                        {
+                            maxvalue = myArray[i];
+                            count = 1;
+                        }
                     }
                 }
-                Console.WriteLine("Most frequent element is " + myArray[currentIndex] + " and occurs " + count + " times.");
+                Console.WriteLine("Most frequent element is " + maxvalue + " and occurs " + maxcount + " times.");
                 Console.WriteLine();
             }
             else

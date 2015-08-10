@@ -23,11 +23,11 @@ namespace Methods7
             Console.WriteLine("Permutations are:");
             Console.WriteLine();
 
-            Permutate(1, n, myArray);
+            Permute(1, n, myArray);
             Console.WriteLine();
         }
 
-        private static void Permutate(int x, int y, int[] nums)
+        private static void Permute(int x, int y, int[] nums)
         {
             int temp;
 
@@ -43,7 +43,7 @@ namespace Methods7
                     }
 
                     nums[x] = temp;
-                    Permutate(x + 1, y, nums);
+                    Permute(x + 1, y, nums);
 
                     for (int j = x; j < i; j++)
                     {

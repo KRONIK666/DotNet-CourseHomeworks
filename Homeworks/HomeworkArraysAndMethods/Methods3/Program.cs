@@ -10,9 +10,10 @@ namespace Methods3
     {
         static void Main(string[] args)
         {
+            Random randomNum = new Random();
+
             for (int j = 1; j <= 10; j++)
             {
-                Random randomNum = new Random();
                 List<int> list = new List<int>();
 
                 for (int i = 0; i < 3; i++)
