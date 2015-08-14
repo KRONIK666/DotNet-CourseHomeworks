@@ -47,8 +47,8 @@ namespace ClassesAndObjects3
 
             squaredHypotenuse = (cathetusA * cathetusA) + (cathetusB * cathetusB);
             tempHypotenuse = Math.Sqrt(squaredHypotenuse);
-            float hypotenuse = Convert.ToSingle(tempHypotenuse);
 
+            float hypotenuse = Convert.ToSingle(tempHypotenuse);
             double tempAngle1 = Math.Atan(cathetusA / cathetusB) * (180 / Math.PI);
             double tempAngle2 = Math.Atan(cathetusA / cathetusB) * (180 / Math.PI);
             tempAngle1 = Math.Asin(cathetusA / hypotenuse) * (180 / Math.PI);
