@@ -10,35 +10,32 @@ namespace ClassesAndObjects1
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Enter 10 cat names!");
             string[] cats = new string[10];
 
             for (int i = 0; i < cats.Length; i++)
             {
-                Console.Write("Next cat: ");
+                Console.Write("Enter cat's name: ");
                 cats[i] = Console.ReadLine();
-            }
+            } Console.WriteLine();
 
-            Console.WriteLine();
-            Console.WriteLine("Enter their ages!");
-            int[] catsAge = new int[10];
+            int[] age = new int[10];
 
-            for (int i = 0; i < catsAge.Length; i++)
+            for (int i = 0; i < age.Length; i++)
             {
-                Console.Write("Enter age: ");
-                catsAge[i] = int.Parse(Console.ReadLine());
-            }
+                Console.Write("Enter cat's age: ");
+                age[i] = int.Parse(Console.ReadLine());
+            } Console.WriteLine();
 
-            Console.WriteLine();
-            Console.WriteLine("Cats info:");
+            Console.WriteLine("Cats Info:");
             Console.WriteLine("------------------------------");
 
             for (int i = 0; i < 10; i++)
             {
-                Cat catInfo = new Cat(cats[i], catsAge[i]);
+                Cat catInfo = new Cat();
+                catInfo.Name = cats[i];
+                catInfo.Age = age[i];
                 catInfo.Say();
             }
-
             Console.WriteLine("------------------------------");
             Console.WriteLine();
         }

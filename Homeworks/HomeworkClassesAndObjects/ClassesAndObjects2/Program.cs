@@ -10,74 +10,79 @@ namespace ClassesAndObjects2
     {
         static void Main(string[] args)
         {
-            string[] model = new string[10];
+            string[] brand = new string[10];
 
-            for (int i = 0; i < model.Length; i++)
+            for (int i = 0; i < brand.Length; i++)
             {
-                Console.Write("Enter 5 cars and 5 SUVs: ");
-                model[i] = Console.ReadLine();
-            }
+                if (i >= 0 && i <= 4)
+                {
+                    Console.Write("Enter automobile brand: ");
+                    brand[i] = Console.ReadLine();
+                }
+                if (i > 4 && i < brand.Length)
+                {
+                    Console.Write("Enter SUV brand: ");
+                    brand[i] = Console.ReadLine();
+                }
+            } Console.WriteLine();
 
-            Console.WriteLine();
             int[] price = new int[10];
 
             for (int i = 0; i < price.Length; i++)
             {
-                Console.Write("Enter its price: ");
+                Console.Write("Enter price for every vehicle: ");
                 price[i] = int.Parse(Console.ReadLine());
-            }
+            } Console.WriteLine();
 
-            Console.WriteLine();
             float[] consumption = new float[10];
 
             for (int i = 0; i < consumption.Length; i++)
             {
-                Console.Write("Enter avarege fuel consumption: ");
+                Console.Write("Enter average fuel consumption: ");
                 consumption[i] = float.Parse(Console.ReadLine());
-            }
+            } Console.WriteLine();
 
-            Console.WriteLine();
-            bool[] highRoad = new bool[10];
-
-            for (int i = 0; i < highRoad.Length; i++)
-            {
-                if (consumption[i] < 10)
-                {
-                    highRoad[i] = false;
-                }
-                if (consumption[i] >= 10)
-                {
-                    highRoad[i] = true;
-                }
-            }
-
-            Console.WriteLine();
-            Console.WriteLine("Cars info:");
+            Console.WriteLine("Vehicles Info:");
             Console.WriteLine("------------------------------");
             Console.WriteLine();
 
             for (int i = 0; i < 10; i++)
             {
-                if (highRoad[i] == false)
+                if (i >= 0 && i <= 4)
                 {
                     Automobile carInfo = new Automobile(price[i], consumption[i]);
-                    Console.WriteLine("Model of car: " + model[i]);
+                    carInfo.Price = price[i];
+                    carInfo.FuelConsumption = consumption[i];
+
+                    Console.WriteLine("Brand of automobile: " + brand[i]);
                     Console.WriteLine("Price: " + carInfo.Price + " EUR");
                     Console.WriteLine("Fuel consumption: " + carInfo.FuelConsumption);
-                    Console.WriteLine("High road: " + highRoad[i]);
                     Console.WriteLine();
                 }
-                if (highRoad[i] == true)
+                if (i > 4 && i < 10)
                 {
-                    SUV carInfo = new SUV(price[i], highRoad[i]);
-                    Console.WriteLine("Model of car: " + model[i]);
-                    Console.WriteLine("Price: " + carInfo.Price + " EUR");
-                    Console.WriteLine("Fuel consumption: " + consumption[i]);
-                    Console.WriteLine("High road: " + carInfo.HighRoad);
-                    Console.WriteLine();
+                    bool highRoad = true;
+
+                    SUV carInfo = new SUV(price[i], highRoad);
+                    carInfo.Price = price[i];
+                    carInfo.HighRoad = highRoad;
+
+                    if (consumption[i] < 10)
+                    {
+                        carInfo.HighRoad = false;
+                        Console.WriteLine("Brand of SUV: " + brand[i]);
+                        Console.WriteLine("Price: " + carInfo.Price + " EUR");
+                        Console.WriteLine("High road: " + carInfo.HighRoad);
+                    }
+                    if (consumption[i] >= 10)
+                    {
+                        carInfo.HighRoad = true;
+                        Console.WriteLine("Brand of SUV: " + brand[i]);
+                        Console.WriteLine("Price: " + carInfo.Price + " EUR");
+                        Console.WriteLine("High road: " + carInfo.HighRoad);
+                    } Console.WriteLine();
                 }
             }
-
             Console.WriteLine("------------------------------");
             Console.WriteLine();
         }

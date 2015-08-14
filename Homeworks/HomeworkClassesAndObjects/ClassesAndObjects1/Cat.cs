@@ -22,10 +22,8 @@ namespace ClassesAndObjects1
             set { age = value; }
         }
 
-        public Cat(string name, int age)
+        public Cat()
         {
-            this.name = name;
-            this.age = age;
         }
 
         public void Say()
