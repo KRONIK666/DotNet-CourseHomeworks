@@ -10,6 +10,7 @@ namespace OOPPrinciples
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("Total persons employed: " + Person.personCount);
         }
     }
 }

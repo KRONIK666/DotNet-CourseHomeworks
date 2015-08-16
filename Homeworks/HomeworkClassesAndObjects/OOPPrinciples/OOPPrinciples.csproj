@@ -41,8 +41,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assistant.cs" />
+    <Compile Include="CollegeTeacher.cs" />
+    <Compile Include="Lecturer.cs" />
+    <Compile Include="Person.cs" />
+    <Compile Include="Professor.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SchoolTeacher.cs" />
+    <Compile Include="Teacher.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
