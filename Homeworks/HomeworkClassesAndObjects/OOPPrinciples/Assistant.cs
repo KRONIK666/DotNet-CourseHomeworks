@@ -9,10 +9,11 @@ namespace OOPPrinciples
     class Assistant : Lecturer
     {
         private bool assistant;
-        public bool Assistant
+
+        public Assistant(string firstName, string familyName, int workingExperience, string university, bool assistant)
+            : base(firstName, familyName, workingExperience, university)
         {
-            get { return assistant; }
-            set { assistant = value; }
+            this.assistant = assistant;
         }
 
         public void Check(string firstName, string familyName, bool assistant)
@@ -27,24 +28,19 @@ namespace OOPPrinciples
             }
         }
 
-        public void WriteScientificArticles(bool articles)
-        {
-            if (articles == true)
-            {
-                Console.WriteLine("This assistant can write scientific articles.");
-            }
-            else
-            {
-                Console.WriteLine("This assistant can't write scientific articles.");
-            }
-        }
-
         public void CheckHomework()
         {
+            Console.WriteLine("Assistants are supposed to check homeworks!");
         }
 
         public void CheckExams()
         {
+            Console.WriteLine("Assistants are supposed to check also exams!");
+        }
+
+        public void WriteScientificArticles()
+        {
+            Console.WriteLine("Assistants can write scientific articles!");
         }
     }
 }

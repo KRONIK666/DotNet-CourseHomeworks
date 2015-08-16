@@ -9,10 +9,11 @@ namespace OOPPrinciples
     class Professor : Lecturer
     {
         private string title;
-        public string Title
+
+        public Professor(string firstName, string familyName, int workingExperience, string university, string title)
+            : base(firstName, familyName, workingExperience, university)
         {
-            get { return title; }
-            set { title = value; }
+            this.title = title;
         }
 
         public void Say(string firstName, string familyName, string title, int workingExperience)
@@ -22,10 +23,12 @@ namespace OOPPrinciples
 
         public void CheckHomework()
         {
+            Console.WriteLine("Proffesors may also check homeworks!");
         }
 
         public void WageExams()
         {
+            Console.WriteLine("Professors can wage exams!");
         }
     }
 }

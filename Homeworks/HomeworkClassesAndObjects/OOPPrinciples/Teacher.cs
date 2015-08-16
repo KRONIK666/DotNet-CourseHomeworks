@@ -22,14 +22,17 @@ namespace OOPPrinciples
 
         public void CheckHomework()
         {
+            Console.WriteLine("Teachers can check homeworks!");
         }
 
         public void Greet()
         {
+            Console.WriteLine("Good morning kids!");
         }
 
         public void SayGoodbye()
         {
+            Console.WriteLine("Have a nice evening and prepare your homeworks!");
         }
     }
 }

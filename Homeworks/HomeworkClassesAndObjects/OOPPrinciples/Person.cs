@@ -30,5 +30,12 @@ namespace OOPPrinciples
         }
 
         public int personCount = 0;
+
+        public Person(string firstName, string familyName, int workingExperience)
+        {
+            this.firstName = firstName;
+            this.familyName = familyName;
+            this.workingExperience = workingExperience;
+        }
     }
 }

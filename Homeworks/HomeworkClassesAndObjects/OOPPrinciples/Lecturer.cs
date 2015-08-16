@@ -10,7 +10,7 @@ namespace OOPPrinciples
     {
         private string university;
 
-        private int maximumlectures = 10;
+        private int maximumLectures = 10;
 
         public Lecturer()
         {
@@ -24,22 +24,27 @@ namespace OOPPrinciples
 
         public void CheckHomework()
         {
+            Console.WriteLine("Lecturers also can check homeworks!");
         }
 
-        public void CheckExercise(int a)
+        public void WageExercise(int a)
         {
+            Console.WriteLine("Some lecturers can wage exercises in {0}!", a);
         }
 
-        public void CheckExercise(int a, int b)
+        public void WageExercise(int a, int b)
         {
+            Console.WriteLine("Other lecturers can wage exercises in {0} and {1}!", a, b);
         }
 
-        public void CheckExercise(int a, int b, int c)
+        public void WageExercise(int a, int b, int c)
         {
+            Console.WriteLine("There also are lecturers that can wage exercises in {0}, {1} and {2}!", a, b, c);
         }
 
         public void Greet()
         {
+            Console.WriteLine("Good afternoon students!");
         }
     }
 }

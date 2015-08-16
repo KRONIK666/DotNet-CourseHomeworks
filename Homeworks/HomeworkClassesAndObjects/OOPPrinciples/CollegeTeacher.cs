@@ -9,14 +9,16 @@ namespace OOPPrinciples
     class CollegeTeacher : Teacher
     {
         private string teachingUniversity;
-        public string TeachingUniversity
+
+        public CollegeTeacher(string firstName, string familyName, int workingExperience, string teachingSubject, string teachingUniversity)
+            : base(firstName, familyName, workingExperience, teachingSubject)
         {
-            get { return teachingUniversity; }
-            set { teachingUniversity = value; }
+            this.teachingUniversity = teachingUniversity;
         }
 
         public void CheckHomework()
         {
+            Console.WriteLine("Teachers can check homeworks!");
         }
     }
 }
