@@ -8,43 +8,38 @@ namespace OOPPrinciples
 {
     class Lecturer : Person
     {
-        private string university;
+        public const int maximumLecturesPerWeek = 16;
 
-        private int maximumLectures = 10;
+        private string teachingUniversity;
+        public string TeachingUniversity
+        {
+            get { return teachingUniversity; }
+            set { teachingUniversity = value; }
+        }
 
         public Lecturer()
         {
         }
 
-        public Lecturer(string firstName, string familyName, int workingExperience, string university)
+        public Lecturer(string firstName, string familyName, int workingExperience, string teachingUniversity)
             : base(firstName, familyName, workingExperience)
         {
-            this.university = university;
+            this.teachingUniversity = teachingUniversity;
         }
 
-        public void CheckHomework()
+        public void WageExercise(string a)
         {
-            Console.WriteLine("Lecturers also can check homeworks!");
+            Console.WriteLine("This lecturer can wage exercises in {0}!", a);
         }
 
-        public void WageExercise(int a)
+        public void WageExercise(string a, string b)
         {
-            Console.WriteLine("Some lecturers can wage exercises in {0}!", a);
+            Console.WriteLine("This lecturer can wage exercises in {0} and {1}!", a, b);
         }
 
-        public void WageExercise(int a, int b)
+        public void WageExercise(string a, string b, string c)
         {
-            Console.WriteLine("Other lecturers can wage exercises in {0} and {1}!", a, b);
-        }
-
-        public void WageExercise(int a, int b, int c)
-        {
-            Console.WriteLine("There also are lecturers that can wage exercises in {0}, {1} and {2}!", a, b, c);
-        }
-
-        public void Greet()
-        {
-            Console.WriteLine("Good afternoon students!");
+            Console.WriteLine("This lecturer can wage exercises in {0}, {1} and {2}!", a, b, c);
         }
     }
 }

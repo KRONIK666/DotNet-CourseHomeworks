@@ -9,26 +9,31 @@ namespace OOPPrinciples
     class Professor : Lecturer
     {
         private string title;
+        public string Title
+        {
+            get { return title; }
+            set { title = value; }
+        }
 
-        public Professor(string firstName, string familyName, int workingExperience, string university, string title)
-            : base(firstName, familyName, workingExperience, university)
+        public Professor(string firstName, string familyName, int workingExperience, string teachingUniversity, string title)
+            : base(firstName, familyName, workingExperience, teachingUniversity)
         {
             this.title = title;
         }
 
-        public void Say(string firstName, string familyName, string title, int workingExperience)
+        public void Say(string title, int workingExperience)
         {
-            Console.WriteLine("Professor {0} {1} has the title {3} and working experience {4} years.", firstName, familyName, title, workingExperience);
+            Console.WriteLine("This professor is {0} and has {1} years of working experience.", title, workingExperience);
         }
 
-        public void CheckHomework()
+        public override void CheckHomeworks()
         {
-            Console.WriteLine("Proffesors may also check homeworks!");
+            Console.WriteLine("This professor is obliged to check homeworks too!");
         }
 
         public void WageExams()
         {
-            Console.WriteLine("Professors can wage exams!");
+            Console.WriteLine("This professor has to wage exams!");
         }
     }
 }

@@ -8,17 +8,17 @@ namespace OOPPrinciples
 {
     class CollegeTeacher : Teacher
     {
-        private string teachingUniversity;
-
-        public CollegeTeacher(string firstName, string familyName, int workingExperience, string teachingSubject, string teachingUniversity)
-            : base(firstName, familyName, workingExperience, teachingSubject)
+        private string teachingCollege;
+        public string TeachingCollege
         {
-            this.teachingUniversity = teachingUniversity;
+            get { return teachingCollege; }
+            set { teachingCollege = value; }
         }
 
-        public void CheckHomework()
+        public CollegeTeacher(string firstName, string familyName, int workingExperience, string teachingSubject, string teachingCollege)
+            : base(firstName, familyName, workingExperience, teachingSubject)
         {
-            Console.WriteLine("Teachers can check homeworks!");
+            this.teachingCollege = teachingCollege;
         }
     }
 }

@@ -6,8 +6,10 @@ using System.Threading.Tasks;
 
 namespace OOPPrinciples
 {
-    static class Person
+    abstract class Person
     {
+        public static int personCount;
+
         protected string firstName;
         public string FirstName
         {
@@ -29,13 +31,33 @@ namespace OOPPrinciples
             set { workingExperience = value; }
         }
 
-        public int personCount = 0;
+        public Person()
+        {
+            personCount += 1;
+        }
 
         public Person(string firstName, string familyName, int workingExperience)
         {
             this.firstName = firstName;
             this.familyName = familyName;
             this.workingExperience = workingExperience;
+
+            personCount += 1;
+        }
+
+        public static int GetPersonCount()
+        {
+            return personCount;
+        }
+
+        public void SayHello()
+        {
+            Console.WriteLine("He/She has to greet with \"Good afternoon!\" students every day!");
+        }
+
+        public virtual void CheckHomeworks()
+        {
+            Console.WriteLine("He/She is supposed to check homeworks!");
         }
     }
 }

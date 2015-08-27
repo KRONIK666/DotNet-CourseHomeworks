@@ -9,6 +9,11 @@ namespace OOPPrinciples
     class Teacher : Person
     {
         private string teachingSubject;
+        public string TeachingSubject
+        {
+            get { return teachingSubject; }
+            set { teachingSubject = value; }
+        }
 
         public Teacher()
         {
@@ -20,19 +25,9 @@ namespace OOPPrinciples
             this.teachingSubject = teachingSubject;
         }
 
-        public void CheckHomework()
-        {
-            Console.WriteLine("Teachers can check homeworks!");
-        }
-
-        public void Greet()
-        {
-            Console.WriteLine("Good morning kids!");
-        }
-
         public void SayGoodbye()
         {
-            Console.WriteLine("Have a nice evening and prepare your homeworks!");
+            Console.WriteLine("This teacher says \"Goodbye!\" to students every day!");
         }
     }
 }

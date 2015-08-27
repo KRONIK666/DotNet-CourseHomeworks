@@ -8,36 +8,25 @@ namespace OOPPrinciples
 {
     class SchoolTeacher : Teacher
     {
-        private string classesList;
+        private string[] teachingClasses = new string[] { "class \"2A\",", "class \"2B\",", "class \"3A\",", "class \"3B\",", "class \"4A\"." };
 
         public SchoolTeacher()
         {
-            this.classesList = "Class 9A";
-            this.classesList = "Class 9B";
-            this.classesList = "Class 10A";
-            this.classesList = "Class 10B";
-            this.classesList = "Class 12A";
         }
 
-        public SchoolTeacher(string firstName, string familyName, int workingExperience, string teachingSubject, string classesList)
-            : base(firstName, familyName, workingExperience, teachingSubject)
+        public void TeachingClasses()
         {
-            this.classesList = classesList;
-        }
+            Console.Write("He/She teaches classes in:");
 
-        public void TeachingClass(string classesList)
-        {
-            Console.WriteLine("This school teacher teaches class " + classesList + "!");
-        }
-
-        public void CheckHomework()
-        {
-            Console.WriteLine("Teachers can check homeworks!");
+            for (int i = 0; i < teachingClasses.Length; i++)
+            {
+                Console.Write(" " + teachingClasses[i]);
+            } Console.WriteLine();
         }
 
         public void EntertainKids()
         {
-            Console.WriteLine("School teachers can entertain kids!");
+            Console.WriteLine("This school teacher has to find way to entertain kids!");
         }
     }
 }

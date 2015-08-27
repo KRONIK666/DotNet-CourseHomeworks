@@ -8,17 +8,22 @@ namespace OOPPrinciples
 {
     class Assistant : Lecturer
     {
-        private bool assistant;
-
-        public Assistant(string firstName, string familyName, int workingExperience, string university, bool assistant)
-            : base(firstName, familyName, workingExperience, university)
+        private bool chiefAssistant;
+        public bool ChiefAssistant
         {
-            this.assistant = assistant;
+            get { return chiefAssistant; }
+            set { chiefAssistant = value; }
         }
 
-        public void Check(string firstName, string familyName, bool assistant)
+        public Assistant(string firstName, string familyName, int workingExperience, string teachingUniversity, bool chiefAssistant)
+            : base(firstName, familyName, workingExperience, teachingUniversity)
         {
-            if (assistant == true)
+            this.chiefAssistant = chiefAssistant;
+        }
+
+        public void CheckAssistant(string firstName, string familyName, bool chiefAssistant)
+        {
+            if (chiefAssistant == true)
             {
                 Console.WriteLine("Assistant {0} {1} is Chief Assistant.", firstName, familyName);
             }
@@ -28,19 +33,19 @@ namespace OOPPrinciples
             }
         }
 
-        public void CheckHomework()
+        public override void CheckHomeworks()
         {
-            Console.WriteLine("Assistants are supposed to check homeworks!");
+                Console.WriteLine("This assistant should check homeworks!");
         }
 
         public void CheckExams()
         {
-            Console.WriteLine("Assistants are supposed to check also exams!");
+            Console.WriteLine("This assistant has to check exams!");
         }
 
         public void WriteScientificArticles()
         {
-            Console.WriteLine("Assistants can write scientific articles!");
+            Console.WriteLine("This assistant is writing scientific articles!");
         }
     }
 }
