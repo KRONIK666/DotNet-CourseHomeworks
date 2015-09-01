@@ -42,13 +42,10 @@ namespace Task4
                     current = numberOfOccurrences;
                     majorant = array[i];
                 }
-                else
+                else if (numberOfOccurrences > current)
                 {
-                    if (numberOfOccurrences > current)
-                    {
-                        current = numberOfOccurrences;
-                        majorant = array[i];
-                    }
+                    current = numberOfOccurrences;
+                    majorant = array[i];
                 }
             }
 
