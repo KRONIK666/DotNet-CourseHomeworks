@@ -14,11 +14,11 @@ namespace ClassTask3
             int max = 0;
             int[] myArray = new int[n];
 
-            Random rand = new Random();
+            Random random = new Random();
 
             for (int i = 0; i < n; i++)
             {
-                myArray[i] = rand.Next(0, 1000000);
+                myArray[i] = random.Next(0, 1000000);
             }
 
             int maxElement = Environment.TickCount;
@@ -97,7 +97,7 @@ namespace ClassTask3
 
             for (int i = 0; i < array.Length; i++)
             {
-                Console.WriteLine(array[i] + " ");
+                Console.WriteLine(array[i]);
             } Console.WriteLine();
         }
     }
