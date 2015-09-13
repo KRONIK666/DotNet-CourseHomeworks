@@ -9,10 +9,31 @@ namespace ClassworkMultithreading
 {
     class Threads
     {
-        public void Job()
+        private string name;
+        public string Name
         {
-            Console.WriteLine("Thread {0} started!", Thread.CurrentThread.Name);
-            Console.WriteLine("Thread {0} sleep time: {1}", Thread.CurrentThread.Name);
+            get { return name; }
+            set { name = value; }
+        }
+
+        private int sleep;
+        public int Sleep
+        {
+            get { return sleep; }
+            set { sleep = value; }
+        }
+
+        public Threads(string name, Random seconds)
+        {
+            this.name = name;
+            this.sleep = seconds.Next(100, 600);
+        }
+
+        public void ThreadsInfo()
+        {
+            Console.WriteLine("Thread {0} started!", name);
+            Thread.Sleep(sleep);
+            Console.WriteLine("Thread {0} sleep time: {1} miliseconds", name, sleep);
         }
     }
 }

@@ -11,9 +11,15 @@ namespace ClassworkMultithreading
     {
         static void Main(string[] args)
         {
-            Thread one = new Thread(new ThreadStart(new Threads().Job));
-            Thread two = new Thread(new ThreadStart(new Threads().Job));
-            Thread three = new Thread(new ThreadStart(new Threads().Job));
+            Random seconds = new Random();
+
+            Thread one = new Thread(new Threads("ONE", seconds).ThreadsInfo);
+            Thread two = new Thread(new Threads("TWO", seconds).ThreadsInfo);
+            Thread three = new Thread(new Threads("THREE", seconds).ThreadsInfo);
+
+            one.Start();
+            two.Start();
+            three.Start();
         }
     }
 }
