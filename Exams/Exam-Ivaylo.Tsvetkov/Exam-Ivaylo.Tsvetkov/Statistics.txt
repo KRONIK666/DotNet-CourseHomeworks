@@ -1,0 +1,3 @@
+Bulgaria|Sofia|3000000
+Italy|Rome|10000000
+Serbia|Belgrade|8000000
