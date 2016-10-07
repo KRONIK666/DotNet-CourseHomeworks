@@ -1,3 +1,6 @@
-Bulgaria|Sofia|3000000
-Italy|Rome|10000000
-Serbia|Belgrade|8000000
+Bulgaria|Sofia|1286380
+England|London|8673700
+Germany|Berlin|3653000
+France|Paris|2230600
+Spain|Madrid|235
+Italy|Rome|2870000
