@@ -7,9 +7,9 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace Exam_Ivaylo.Tsvetkov
+namespace BudgetManager
 {
-    public partial class Home_Page : System.Web.UI.Page
+    public partial class Home : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -18,21 +18,16 @@ namespace Exam_Ivaylo.Tsvetkov
 
         protected void btnSubmit_Click(object sender, EventArgs e)
         {
-            Statistics statistics = new Statistics()
+            Expense expense = new Expense()
             {
-                Country = countryTextBox.Text,
-                Capital = capitalTextBox.Text,
-                Population = int.Parse(populationTextBox.Text),
+                DateOfExpense = DateTime.Parse(dateTxtBox.Text),
+                ExpenseType = expenseTypeTxtBox.Text,
+                Cost = double.Parse(sumTxtBox.Text)
             };
-
             using (StreamWriter writer = new StreamWriter(ConfigurationManager.AppSettings["FilePath"], true))
             {
-                writer.WriteLine(statistics);
+                writer.WriteLine(expense);
             }
-
-            countryTextBox.Text = "";
-            capitalTextBox.Text = "";
-            populationTextBox.Text = "";
         }
     }
 }

@@ -7,10 +7,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Exam_Ivaylo.Tsvetkov {
+namespace LibrarySystem {
     
     
-    public partial class Home_Page {
+    public partial class AddNewBook {
         
         /// <summary>
         /// form1 control.
@@ -22,75 +22,93 @@ namespace Exam_Ivaylo.Tsvetkov {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// Country control.
+        /// titleLabel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Country;
+        protected global::System.Web.UI.WebControls.Label titleLabel;
         
         /// <summary>
-        /// Capital control.
+        /// titleTxtBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Capital;
+        protected global::System.Web.UI.WebControls.TextBox titleTxtBox;
         
         /// <summary>
-        /// Population control.
+        /// authorLabel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Population;
+        protected global::System.Web.UI.WebControls.Label authorLabel;
         
         /// <summary>
-        /// countryTextBox control.
+        /// authorTxtBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox countryTextBox;
+        protected global::System.Web.UI.WebControls.TextBox authorTxtBox;
         
         /// <summary>
-        /// capitalTextBox control.
+        /// priceLabel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox capitalTextBox;
+        protected global::System.Web.UI.WebControls.Label priceLabel;
         
         /// <summary>
-        /// populationTextBox control.
+        /// priceTxtBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox populationTextBox;
+        protected global::System.Web.UI.WebControls.TextBox priceTxtBox;
         
         /// <summary>
-        /// People control.
+        /// genreLabel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label People;
+        protected global::System.Web.UI.WebControls.Label genreLabel;
         
         /// <summary>
-        /// btnSubmit control.
+        /// genreTxtBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnSubmit;
+        protected global::System.Web.UI.WebControls.TextBox genreTxtBox;
+        
+        /// <summary>
+        /// addBookBtn control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button addBookBtn;
+        
+        /// <summary>
+        /// resultLabel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label resultLabel;
     }
 }

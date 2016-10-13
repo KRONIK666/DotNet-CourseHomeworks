@@ -7,10 +7,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Exam_Ivaylo.Tsvetkov {
+namespace BudgetManager {
     
     
-    public partial class Search_Page {
+    public partial class Home {
         
         /// <summary>
         /// form1 control.
@@ -22,75 +22,48 @@ namespace Exam_Ivaylo.Tsvetkov {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// CountrySearch control.
+        /// statisticsBtn control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label CountrySearch;
+        protected global::System.Web.UI.WebControls.LinkButton statisticsBtn;
         
         /// <summary>
-        /// CapitalSearch control.
+        /// dateTxtBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label CapitalSearch;
+        protected global::System.Web.UI.WebControls.TextBox dateTxtBox;
         
         /// <summary>
-        /// PopulationSearch control.
+        /// expenseTypeTxtBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label PopulationSearch;
+        protected global::System.Web.UI.WebControls.TextBox expenseTypeTxtBox;
         
         /// <summary>
-        /// countryTextBox control.
+        /// sumTxtBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox countryTextBox;
+        protected global::System.Web.UI.WebControls.TextBox sumTxtBox;
         
         /// <summary>
-        /// capitalTextBox control.
+        /// btnSubmit control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox capitalTextBox;
-        
-        /// <summary>
-        /// populationTextBox control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox populationTextBox;
-        
-        /// <summary>
-        /// btnSearch control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnSearch;
-        
-        /// <summary>
-        /// infoRepeater control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater infoRepeater;
+        protected global::System.Web.UI.WebControls.Button btnSubmit;
     }
 }

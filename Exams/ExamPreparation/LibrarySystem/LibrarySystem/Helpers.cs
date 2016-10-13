@@ -5,30 +5,31 @@ using System.IO;
 using System.Linq;
 using System.Web;
 
-namespace Exam_Ivaylo.Tsvetkov
+namespace LibrarySystem
 {
-    public class Database
+    public class Helpers
     {
-        public static List<Statistics> GetResults()
+        public static List<Book> GetBooks()
         {
-            List<Statistics> result = new List<Statistics>();
+            List<Book> books = new List<Book>();
 
             using (StreamReader reader = new StreamReader(ConfigurationManager.AppSettings["FilePath"]))
             {
                 string line = reader.ReadLine();
                 do
                 {
-                    string[] countryInfo = line.Split('|');
-                    result.Add(new Statistics()
+                    string[] book = line.Split('|');
+                    books.Add(new Book()
                     {
-                        Country = countryInfo[0],
-                        Capital = countryInfo[1],
-                        Population = int.Parse(countryInfo[2])
+                        Title = book[0],
+                        Author = book[1],
+                        Price = double.Parse(book[2]),
+                        Genre = book[3]
                     });
                     line = reader.ReadLine();
                 } while (line != null);
             }
-            return result;
+            return books;
         }
     }
 }

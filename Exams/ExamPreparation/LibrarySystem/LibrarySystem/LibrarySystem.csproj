@@ -7,12 +7,12 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{24B57EF4-A606-4F28-807D-4689C6246FC4}</ProjectGuid>
+    <ProjectGuid>{31BB4E5A-3396-4E3D-9EBE-343EFFEF2984}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Exam_Ivaylo.Tsvetkov</RootNamespace>
-    <AssemblyName>Exam-Ivaylo.Tsvetkov</AssemblyName>
+    <RootNamespace>LibrarySystem</RootNamespace>
+    <AssemblyName>LibrarySystem</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <IISExpressSSLPort />
@@ -65,28 +65,44 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Home Page.aspx" />
-    <Content Include="Search Page.aspx" />
+    <Content Include="AddNewBook.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="Home.aspx" />
+    <Content Include="SearchBook.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Database.cs" />
-    <Compile Include="Home Page.aspx.cs">
-      <DependentUpon>Home Page.aspx</DependentUpon>
+    <Compile Include="AddNewBook.aspx.cs">
+      <DependentUpon>AddNewBook.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Home Page.aspx.designer.cs">
-      <DependentUpon>Home Page.aspx</DependentUpon>
+    <Compile Include="AddNewBook.aspx.designer.cs">
+      <DependentUpon>AddNewBook.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Book.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers.cs" />
+    <Compile Include="Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Search Page.aspx.cs">
-      <DependentUpon>Search Page.aspx</DependentUpon>
+    <Compile Include="SearchBook.aspx.cs">
+      <DependentUpon>SearchBook.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Search Page.aspx.designer.cs">
-      <DependentUpon>Search Page.aspx</DependentUpon>
+    <Compile Include="SearchBook.aspx.designer.cs">
+      <DependentUpon>SearchBook.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Statistics.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Models\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -101,9 +117,9 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>49287</DevelopmentServerPort>
+          <DevelopmentServerPort>4132</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:49287/</IISUrl>
+          <IISUrl>http://localhost:4132/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
