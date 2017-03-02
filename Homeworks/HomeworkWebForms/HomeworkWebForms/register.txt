@@ -1,6 +1,0 @@
-UserName: KRONIK666
-Password: slipknot1725
-Repeat Password: slipknot1725
-Age: 31
-E-mail: kronik@abv.bg
-
