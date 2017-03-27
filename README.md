@@ -1,4 +1,4 @@
-# DotNet-CourseHomeworks
+# C# .Net Course at Software Academy
 
 C# programs with algorithms written in Console Applications (Classwork and Homeworks).
 - Data Types, Arrays, Conditions, Loops, Matrix, Multithreading, Strings and Texts;
